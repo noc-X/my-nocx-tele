@@ -29,7 +29,7 @@ bot.on('callback_query', (callbackQuery) => {
     bot.sendMessage(message.chat.id, 'Launching the app...', {
       reply_markup: {
         inline_keyboard: [
-          [{ text: 'Open App', url: 'https://yourapp.com' }]
+          [{ text: 'Open App', url: 'https://t.me/nocturnalx_bot/nyx' }]
         ]
       }
     });
