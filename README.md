@@ -1,0 +1,2 @@
+# my-nocx-tele
+ full
