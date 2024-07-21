@@ -1,28 +1,12 @@
-import React, { useState, useEffect } from 'react';
-
-interface PresaleInfo {
-  countdown: string;
-  benefits: string;
-}
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Presale: React.FC = () => {
-  const [presaleInfo, setPresaleInfo] = useState<PresaleInfo>({ countdown: '', benefits: '' });
-
-  useEffect(() => {
-    // Fetch presale info from API
-    setPresaleInfo({
-      countdown: 'Countdown data from API',
-      benefits: 'Benefits data from API',
-    });
-  }, []);
-
   return (
-    <div>
-      <h2>Presale</h2>
-      <div>Countdown: {presaleInfo.countdown}</div>
-      <div>Benefits: {presaleInfo.benefits}</div>
-      <button>Connect Wallet</button>
-      <button>Buy Tokens</button>
+    <div className="page-container">
+      <h1>Presale Page</h1>
+      <p>Information about presale goes here...</p>
+      <Link to="/" className="back-button">Kembali</Link>
     </div>
   );
 };

@@ -8,14 +8,6 @@ body {
   background-position: center;
 }
 
-.menu-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 100vh;
-}
-
 .menu-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -101,6 +93,32 @@ body {
   transform: scale(1.05);
 }
 
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.back-button {
+  background-color: #ffe600;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 20px;
+}
+
+.back-button:hover {
+  background-color: #ffd700;
+  transform: scale(1.05);
+}
+
 /* Media query untuk layar handphone */
 @media (max-width: 768px) {
   .menu-container {
@@ -117,7 +135,7 @@ body {
     font-size: 14px;
   }
 
-  .footer-button {
+  .footer-button, .back-button {
     padding: 8px 16px;
     font-size: 14px;
   }
@@ -138,7 +156,7 @@ body {
     font-size: 12px;
   }
 
-  .footer-button {
+  .footer-button, .back-button {
     padding: 6px 12px;
     font-size: 12px;
   }

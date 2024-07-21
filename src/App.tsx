@@ -14,7 +14,7 @@ import './App.css';
 const App: React.FC = () => {
   useEffect(() => {
     const sound = new Howl({
-      src: ['path/to/your/music.mp3'],
+      src: ['assets/music/music.mp3'],
       autoplay: true,
       loop: true,
     });

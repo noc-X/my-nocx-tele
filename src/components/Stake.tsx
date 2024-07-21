@@ -1,23 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Stake: React.FC = () => {
-  useEffect(() => {
-    const canvas = document.getElementById('myChart') as HTMLCanvasElement;
-    if (canvas) {
-      const ctx = canvas.getContext('2d');
-      if (ctx) {
-        // Initialize Chart.js chart
-        // new Chart(ctx, { ... });
-      }
-    }
-  }, []);
-
   return (
-    <div>
-      <h2>Stake</h2>
-      <p>Informasi staking dan APR akan ditampilkan di sini.</p>
-      <canvas id="myChart"></canvas>
-      <button>Connect Wallet</button>
+    <div className="page-container">
+      <h1>Stake Page</h1>
+      <p>Information about staking goes here...</p>
+      <Link to="/" className="back-button">Kembali</Link>
     </div>
   );
 };
