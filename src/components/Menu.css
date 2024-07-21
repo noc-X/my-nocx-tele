@@ -9,8 +9,9 @@ body {
 }
 
 .menu-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
   justify-content: center;
   align-items: center;
   padding: 20px;
@@ -25,19 +26,31 @@ body {
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 160px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   text-decoration: none;
   color: #333;
   transition: transform 0.3s, background-color 0.3s;
+  overflow: hidden;
 }
 
 .menu-item img {
   width: 100px;
   height: 100px;
-  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.menu-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .menu-item:hover {
@@ -45,13 +58,50 @@ body {
   background-color: #f0f0f0;
 }
 
-.menu-label {
-  font-size: 16px;
-  font-weight: bold;
-  color: #000;
-}
-
 .menu-item img,
 .menu-label {
   pointer-events: none;
+}
+
+/* Media query untuk layar handphone */
+@media (max-width: 768px) {
+  .menu-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .menu-item {
+    width: calc(50vw - 30px);
+    height: calc(50vw - 10px);
+  }
+
+  .menu-item img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .menu-label {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .menu-item {
+    width: calc(50vw - 20px);
+    height: calc(50vw - 20px);
+  }
+
+  .menu-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .menu-label {
+    font-size: 12px;
+  }
 }
