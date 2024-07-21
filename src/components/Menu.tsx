@@ -34,6 +34,8 @@ const Menu: React.FC = () => {
       <div className="footer">
         <a href="https://t.me/yourchannel" className="footer-button" target="_blank" rel="noopener noreferrer">Join Channel</a>
         <a href="https://t.me/yourgroup" className="footer-button" target="_blank" rel="noopener noreferrer">Join Global Chat</a>
+        <a href="https://t.me/febriatry" className="footer-button" target="_blank" rel="noopener noreferrer">Stay Tuned</a>
+      
       </div>
     </div>
   );

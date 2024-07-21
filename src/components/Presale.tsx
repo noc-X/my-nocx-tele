@@ -6,7 +6,7 @@ const Presale: React.FC = () => {
     <div className="page-container">
       <h1>Presale Page</h1>
       <p>Information about presale goes here...</p>
-      <Link to="/" className="back-button">Kembali</Link>
+      <Link to="/" className="back-button">Back</Link>
     </div>
   );
 };

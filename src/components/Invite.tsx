@@ -1,33 +1,13 @@
-import React, { useState, useEffect } from 'react';
-
-interface Invite {
-  _id: string;
-  name: string;
-  active: boolean;
-}
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Menu.css';
 
 const Invite: React.FC = () => {
-  const [invites, setInvites] = useState<Invite[]>([]);
-
-  useEffect(() => {
-    // Fetch invite data from API
-    setInvites([
-      { _id: '1', name: 'Friend 1', active: true },
-      { _id: '2', name: 'Friend 2', active: false },
-    ]);
-  }, []);
-
   return (
-    <div>
-      <h2>Invite</h2>
-      <ul>
-        {invites.map((invite) => (
-          <li key={invite._id}>
-            <div>{invite.name}</div>
-            <div>Status: {invite.active ? 'Active' : 'Inactive'}</div>
-          </li>
-        ))}
-      </ul>
+    <div className="page-container">
+      <h1>Invite Page</h1>
+      <p>Information about invites goes here...</p>
+      <Link to="/" className="back-button">Back</Link>
     </div>
   );
 };

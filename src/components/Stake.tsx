@@ -6,7 +6,7 @@ const Stake: React.FC = () => {
     <div className="page-container">
       <h1>Stake Page</h1>
       <p>Information about staking goes here...</p>
-      <Link to="/" className="back-button">Kembali</Link>
+      <Link to="/" className="back-button">Back</Link>
     </div>
   );
 };
