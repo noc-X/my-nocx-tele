@@ -15,5 +15,6 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
       },
     },
+    outDir: '../server/public', // Output build ke folder server/public
   },
 });

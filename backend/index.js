@@ -1,18 +1,17 @@
+const axios = require('axios');
 const express = require('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const { Telegraf } = require('telegraf');
 const connectDB = require('./config/db');
-const axios = require('axios');
 
 // Load environment variables
 dotenv.config();
+const FRONTEND_URL = process.env.FRONTEND_URL;
 
-// Initialize the Express application
 const app = express();
 const port = process.env.PORT || 5000;
 
-// Connect to MongoDB
 const uri = process.env.MONGODB_URI;
 if (!uri) {
   console.error('MongoDB connection string is not defined.');
