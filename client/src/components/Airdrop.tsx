@@ -8,7 +8,7 @@ const Airdrop: React.FC = () => {
   useEffect(() => {
     const fetchAirdropInfo = async () => {
       try {
-        const res = await axios.get(`https://67.205.142.211/api/airdrop/${userId}`);
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/airdrop/${userId}`);
         setAirdropInfo(res.data);
       } catch (error) {
         console.error(error);
@@ -19,7 +19,7 @@ const Airdrop: React.FC = () => {
 
   const claimAirdrop = async () => {
     try {
-      const res = await axios.post(`https://67.205.142.211/api/airdrop/claim/${userId}`);
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/airdrop/claim/${userId}`);
       alert(res.data.msg);
       setAirdropInfo({ ...airdropInfo, claimed: true });
     } catch (error) {

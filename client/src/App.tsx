@@ -1,35 +1,16 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Menu from './components/Menu';
+import Airdrop from './components/Airdrop';
 import Stake from './components/Stake';
 import Presale from './components/Presale';
 import Partnership from './components/Partnership';
-import Airdrop from './components/Airdrop';
 import Task from './components/Task';
 import Invite from './components/Invite';
-import { Howl } from 'howler';
-import anime from 'animejs';
-import './App.css';
+import WalletConnect from './components/WalletConnect';
+import AdminTasks from './components/AdminTasks';
+import Menu from './components/Menu';
 
 const App: React.FC = () => {
-  useEffect(() => {
-    const sound = new Howl({
-      src: ['assets/music/music.mp3'],
-      autoplay: true,
-      loop: true,
-    });
-
-    sound.play();
-
-    anime({
-      targets: '.menu-item img',
-      translateY: -10,
-      direction: 'alternate',
-      loop: true,
-      easing: 'easeInOutSine',
-    });
-  }, []);
-
   return (
     <Router>
       <Routes>
@@ -40,6 +21,8 @@ const App: React.FC = () => {
         <Route path="/airdrop" element={<Airdrop />} />
         <Route path="/task" element={<Task />} />
         <Route path="/invite" element={<Invite />} />
+        <Route path="/wallet-connect" element={<WalletConnect />} />
+        <Route path="/admin/tasks" element={<AdminTasks />} />
       </Routes>
     </Router>
   );
