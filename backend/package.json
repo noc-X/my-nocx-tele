@@ -1,19 +1,11 @@
 {
-  "name": "my-miniapp-backend",
-  "version": "0.0.0",
-  "private": true,
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.10.9",
-    "telegraf": "^4.0.0",
-    "ton-client-node-js": "^0.28.0"
-  },
-  "engines": {
-    "node": ">=14.x",
-    "npm": ">=6.x"
+    "express": "^4.17.1"
   }
 }

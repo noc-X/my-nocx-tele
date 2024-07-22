@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "vite": ["./node_modules/vite"],
+        "@vite/client": ["./node_modules/vite/client.d.ts"]
+      }
+    },
+    "include": ["client/src", "backend"]
+  }
+  
