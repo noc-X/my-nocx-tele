@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "devDependencies": {
     "@types/animejs": "^3.1.12",
