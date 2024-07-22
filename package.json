@@ -30,6 +30,10 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.25.1",
     "tailwindcss": "^3.4.6",
-    "ton-client-node-js": "^0.28.0"
+    "ton-client-node-js": "^0.28.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "dotenv": "^8.2.0",
+    "telegraf": "^4.0.0"
   }
 }

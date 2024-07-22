@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const { getUserAirdrop, claimAirdrop } = require('../controllers/airdropController');
+const { getAirdropInfo, claimAirdrop, addAirdropPoints } = require('../controllers/airdropController');
 
-router.get('/:telegramId', getUserAirdrop);
-router.post('/claim', claimAirdrop);
+router.get('/:userId', getAirdropInfo);
+router.post('/claim/:userId', claimAirdrop);
+router.post('/add', addAirdropPoints);
 
 module.exports = router;
