@@ -1,10 +1,14 @@
 {
+    "name": "my-miniapp",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
     "scripts": {
       "heroku-postbuild": "cd client && npm install && npm run build"
     },
     "engines": {
-      "node": "14.x",
-      "npm": "6.x"
+      "node": ">=14.x",
+      "npm": ">=6.x"
     }
   }
   
