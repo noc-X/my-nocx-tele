@@ -1,25 +1,30 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Menu from './components/Menu';
-import Stake from './components/Stake';
-import Presale from './components/Presale';
-import Partnership from './components/Partnership';
-import Airdrop from './components/Airdrop';
-import Task from './components/Task';
-import Invite from './components/Invite';
-import { Howl } from 'howler';
-import anime from 'animejs';
-import './App.css';
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const jsx_runtime_1 = require("react/jsx-runtime");
+const react_1 = require("react");
+const react_router_dom_1 = require("react-router-dom");
+const Menu_1 = __importDefault(require("./components/Menu"));
+const Stake_1 = __importDefault(require("./components/Stake"));
+const Presale_1 = __importDefault(require("./components/Presale"));
+const Partnership_1 = __importDefault(require("./components/Partnership"));
+const Airdrop_1 = __importDefault(require("./components/Airdrop"));
+const Task_1 = __importDefault(require("./components/Task"));
+const Invite_1 = __importDefault(require("./components/Invite"));
+const howler_1 = require("howler");
+const animejs_1 = __importDefault(require("animejs"));
+require("./App.css");
 const App = () => {
-    useEffect(() => {
-        const sound = new Howl({
+    (0, react_1.useEffect)(() => {
+        const sound = new howler_1.Howl({
             src: ['assets/music/music.mp3'],
             autoplay: true,
             loop: true,
         });
         sound.play();
-        anime({
+        (0, animejs_1.default)({
             targets: '.menu-item img',
             translateY: -10,
             direction: 'alternate',
@@ -27,6 +32,6 @@ const App = () => {
             easing: 'easeInOutSine',
         });
     }, []);
-    return (_jsx(Router, { children: _jsxs(Routes, { children: [_jsx(Route, { path: "/", element: _jsx(Menu, {}) }), _jsx(Route, { path: "/stake", element: _jsx(Stake, {}) }), _jsx(Route, { path: "/presale", element: _jsx(Presale, {}) }), _jsx(Route, { path: "/partnership", element: _jsx(Partnership, {}) }), _jsx(Route, { path: "/airdrop", element: _jsx(Airdrop, {}) }), _jsx(Route, { path: "/task", element: _jsx(Task, {}) }), _jsx(Route, { path: "/invite", element: _jsx(Invite, {}) })] }) }));
+    return ((0, jsx_runtime_1.jsx)(react_router_dom_1.BrowserRouter, { children: (0, jsx_runtime_1.jsxs)(react_router_dom_1.Routes, { children: [(0, jsx_runtime_1.jsx)(react_router_dom_1.Route, { path: "/", element: (0, jsx_runtime_1.jsx)(Menu_1.default, {}) }), (0, jsx_runtime_1.jsx)(react_router_dom_1.Route, { path: "/stake", element: (0, jsx_runtime_1.jsx)(Stake_1.default, {}) }), (0, jsx_runtime_1.jsx)(react_router_dom_1.Route, { path: "/presale", element: (0, jsx_runtime_1.jsx)(Presale_1.default, {}) }), (0, jsx_runtime_1.jsx)(react_router_dom_1.Route, { path: "/partnership", element: (0, jsx_runtime_1.jsx)(Partnership_1.default, {}) }), (0, jsx_runtime_1.jsx)(react_router_dom_1.Route, { path: "/airdrop", element: (0, jsx_runtime_1.jsx)(Airdrop_1.default, {}) }), (0, jsx_runtime_1.jsx)(react_router_dom_1.Route, { path: "/task", element: (0, jsx_runtime_1.jsx)(Task_1.default, {}) }), (0, jsx_runtime_1.jsx)(react_router_dom_1.Route, { path: "/invite", element: (0, jsx_runtime_1.jsx)(Invite_1.default, {}) })] }) }));
 };
-export default App;
+exports.default = App;

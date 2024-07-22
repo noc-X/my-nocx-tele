@@ -1,6 +1,8 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { Link } from 'react-router-dom';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const jsx_runtime_1 = require("react/jsx-runtime");
+const react_router_dom_1 = require("react-router-dom");
 const Stake = () => {
-    return (_jsxs("div", { className: "page-container", children: [_jsx("h1", { children: "Stake Page" }), _jsx("p", { children: "Information about staking goes here..." }), _jsx(Link, { to: "/", className: "back-button", children: "Back" })] }));
+    return ((0, jsx_runtime_1.jsxs)("div", { className: "page-container", children: [(0, jsx_runtime_1.jsx)("h1", { children: "Stake Page" }), (0, jsx_runtime_1.jsx)("p", { children: "Information about staking goes here..." }), (0, jsx_runtime_1.jsx)(react_router_dom_1.Link, { to: "/", className: "back-button", children: "Back" })] }));
 };
-export default Stake;
+exports.default = Stake;

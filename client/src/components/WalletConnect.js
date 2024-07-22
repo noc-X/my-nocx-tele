@@ -1,5 +1,7 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const jsx_runtime_1 = require("react/jsx-runtime");
 const WalletConnect = () => {
-    return (_jsxs("div", { children: [_jsx("h2", { children: "Wallet Connect" }), _jsx("p", { children: "Connect your wallet to access features." }), _jsx("button", { children: "Connect Wallet" })] }));
+    return ((0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsx)("h2", { children: "Wallet Connect" }), (0, jsx_runtime_1.jsx)("p", { children: "Connect your wallet to access features." }), (0, jsx_runtime_1.jsx)("button", { children: "Connect Wallet" })] }));
 };
-export default WalletConnect;
+exports.default = WalletConnect;
