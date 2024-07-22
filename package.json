@@ -8,6 +8,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "heroku-postbuild": "cd client && npm install && npm run build"
+
   },
   "devDependencies": {
     "@types/animejs": "^3.1.12",
@@ -36,5 +37,10 @@
     "mongoose": "^5.10.9",
     "dotenv": "^8.2.0",
     "telegraf": "^4.0.0"
-  }
+  },
+  "engines": {
+  "node": ">=14.x",
+  "npm": ">=6.x"
+}
+
 }
